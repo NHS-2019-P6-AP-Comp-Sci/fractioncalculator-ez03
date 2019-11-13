@@ -16,7 +16,8 @@ public class FracCalc {
     	Scanner userInput = new Scanner(System.in); 
     	System.out.println("Enter an equation: "); 
     	String expression = userInput.next(); 
-    	// gather the user's string input for what expression they would like the calculator to compute
+    	/* gather the user's string input for what expression they would like 
+    	the calculator to compute */
     	
     	produceAnswer(expression); 
     	
@@ -27,7 +28,8 @@ public class FracCalc {
     // ** IMPORTANT ** DO NOT DELETE THIS FUNCTION.  This function will be used to test your code
     // This function takes a String 'input' and produces the result
     //
-    // input is a fraction string that needs to be evaluated.  For your program, this will be the user input.
+    /* input is a fraction string that needs to be evaluated.  For your program, 
+    this will be the user input. */
     //      e.g. input ==> "1/2 + 3/4"
     //
     // The function should return the result of the fraction after it has been calculated
@@ -40,7 +42,9 @@ public class FracCalc {
     	String num1 = input.substring(0, firstSpace); 
     	String operator = input.substring((firstSpace + 1), (firstSpace + 2)); 
     	String num2 = input.substring(firstSpace + 3); 
-    	// Parse the user's string input into three parts: the first number, the operator, and the second number
+    	/* Parse the user's string input into three parts: the first number, 
+    	 * the operator, and the second number
+    	 */
     	
     	System.out.println(num2);
     	// print the parsed second number that the user put as their input
