@@ -4,10 +4,22 @@
 
 package fracCalc;
 
+import java.util.*; 
+
 public class FracCalc {
 
     public static void main(String[] args)
     {
+    	System.out.println("Welcome to the fraction calculator");
+    	System.out.println(); 
+    	
+    	Scanner userInput = new Scanner(System.in); 
+    	System.out.println("Enter an equation: "); 
+    	String expression = userInput.next(); 
+    	// gather the user's string input for what expression they would like the calculator to compute
+    	
+    	produceAnswer(expression); 
+    	
         // TODO: Read the input from the user and call produceAnswer with an equation
 
     }
@@ -22,9 +34,19 @@ public class FracCalc {
     //      e.g. return ==> "1_1/4"
     public static String produceAnswer(String input)
     {
-        // TODO: Implement this function to produce the solution to the input
+    	int firstSpace = input.indexOf(" "); 
+    	// find the index of the space between the first number and the operator
+    	
+    	String num1 = input.substring(0, firstSpace); 
+    	String operator = input.substring((firstSpace + 1), (firstSpace + 2)); 
+    	String num2 = input.substring(firstSpace + 3); 
+    	// Parse the user's string input into three parts: the first number, the operator, and the second number
+    	
+    	System.out.println(num2);
+    	// print the parsed second number that the user put as their input
 
-        return "";
+        return num2;
+     // TODO: Implement this function to produce the solution to the input
     }
 
     // TODO: Fill in the space below with any helper methods that you think you will need
